@@ -93,7 +93,7 @@ export default function FeaturedCourses() {
             className="text-4xl font-bold bg-gradient-to-r from-blue-600
            via-purple-400 to-green-500
             bg-clip-text text-transparent  
-             drop-shadow-[0_0_10px_rgba(200,200,260,0.4)] "
+              "
           >
             Explore Our Courses
           </h2>
