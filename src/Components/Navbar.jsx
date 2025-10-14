@@ -1,11 +1,14 @@
-import { useState  } from "react";
-import { Menu, X } from "lucide-react"; 
-import { Link } from "react-router-dom";// for hamburger icons
-
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom"; // for hamburger icons
+// import { useClerk } from "@clerk/clerk-react";
+import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const { openSignIn } = useClerk();
+  const { user } = useUser();
   return (
     <nav className="bg-white  fixed  w-full shadow-sm ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
@@ -38,14 +41,14 @@ export default function Navbar() {
 
             <div>
               <button
+                onClick={() => openSignIn()}
                 className="
               ml-4 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium hover:opacity-90 transition
               "
               >
-                Get Started
+                Create Account
               </button>
             </div>
-           
           </div>
 
           {/* Mobile menu button */}

@@ -11,6 +11,8 @@ import Courses from "./Components/Courses";
 import Contact from "./Components/Contact";
 import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
+import CourseDetails from "./Components/CourseDetails";
+import AboutPage from "./Components/AboutPage";
 
 function App() {
   return (
@@ -21,8 +23,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<AboutPage/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/signup" element={<SignUp/>}/>
+          <Route path="/coursedetails/:id" element={<CourseDetails/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>

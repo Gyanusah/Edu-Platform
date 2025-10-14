@@ -12,10 +12,8 @@ export default function HeroSection() {
       className=" h-145 w-full  
     bg-[linear-gradient(120deg,_#2563eb,_#a855f7,_#16a34a)] 
      text-transparent  
-     
       grid
       sm:grid-cols-1
-     
         lg:grid-cols-2
         overflow-auto
         
@@ -56,14 +54,16 @@ export default function HeroSection() {
         sm:space-x-4 mb-10 pt-7"
         >
           <button
-            className="flex items-center justify-center px-6 py-3 font-bold  text-white   bg-gradient-to-r from-blue-600 to-purple-600     
+            className="flex items-center justify-center px-6 py-3 font-bold  text-white 
+              bg-gradient-to-r from-blue-600 to-purple-600     
           shadow-2xl rounded-2xl  transition duration-500 transform hover:scale-[1.05]"
           >
             Start Learning Today
           </button>
           <button
             onClick={handleChange}
-            className="text-white flex items-center justify-center px-6 py-3 font-bold  bg-blue-700 shadow-2xl  rounded-2xl   transition duration-300 transform hover:scale-[1.05]"
+            className="text-white flex items-center justify-center px-6 py-3 font-bold 
+             bg-blue-700 shadow-2xl  rounded-2xl   transition duration-300 transform hover:scale-[1.05]"
           >
             Explore Course
           </button>
