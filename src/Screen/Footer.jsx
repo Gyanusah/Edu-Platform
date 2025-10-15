@@ -1,59 +1,98 @@
-import React from 'react'
+
+
+import React from "react";
 
 export default function Footer() {
   return (
-    <div className='bg-gray-300'>
+    <footer className="bg-gray-600 text-gray-300">
+      {/* Top Section */}
       <div
-        className="sm:max-w-full w-full lg:h-full sm:h-full  
-    grid
-    sm:grid-cols-1
-    md:grid-cols-2
-    lg:grid-cols-4
-    gap-5
-    
-    "
+        className="max-w-7xl mx-auto px-6 py-12 
+        grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10"
       >
-        <div className="pt-10  ml-10 space-x-2">
-          <span className="text-blue-500 text-2xl">🎓</span>
-          <span className="text-xl font-bold">
-            <span className="text-blue-600">Edu</span>
-            <span className="bg-gradient-to-r from-purple-500 to-green-400 text-transparent  bg-clip-text">
-              Platform
-            </span>
-          </span>
-          <p className="">
+        {/* Brand */}
+        <div>
+          <div className="flex items-center space-x-2 mb-4">
+            <span className="text-3xl">🎓</span>
+            <h2 className="text-2xl font-bold">
+              <span className="text-blue-500">Edu</span>
+              <span className="bg-gradient-to-r from-purple-500 to-green-400 bg-clip-text text-transparent">
+                Platform
+              </span>
+            </h2>
+          </div>
+          <p className="text-sm leading-relaxed text-gray-400">
             Empowering learners worldwide with comprehensive online and offline
             education. Transform your career with our expert-led courses.
           </p>
         </div>
 
-        <div className=" lg:pt-10 sm:ml-10  ">
-          <h2 className=" font-black">Quicks Links</h2>
-          <p>Browser Courses</p>
-          <p>Abouts Us</p>
-          <p> Contact</p>
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
+          <ul className="space-y-2">
+            <li className="hover:text-blue-400 cursor-pointer">
+              Browse Courses
+            </li>
+            <li className="hover:text-blue-400 cursor-pointer">About Us</li>
+            <li className="hover:text-blue-400 cursor-pointer">Contact</li>
+          </ul>
         </div>
 
-        <div className=" lg:pt-10 sm:ml-10  ">
-          <h2 className=" font-black">Popular Courses</h2>
-          <p>Python Programming</p>
-          <p>Wed Development</p>
-          <p>Cybersecurity</p>
-          <p>Finance & Analytic</p>
+        {/* Popular Courses */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-3">
+            Popular Courses
+          </h3>
+          <ul className="space-y-2">
+            <li className="hover:text-blue-400 cursor-pointer">
+              Python Programming
+            </li>
+            <li className="hover:text-blue-400 cursor-pointer">
+              Web Development
+            </li>
+            <li className="hover:text-blue-400 cursor-pointer">
+              Cybersecurity
+            </li>
+            <li className="hover:text-blue-400 cursor-pointer">
+              Finance & Analytics
+            </li>
+          </ul>
         </div>
 
-        <div className=" lg:pt-10 sm:ml-10  ">
-          <h2 className=" font-black">Contact Info</h2>
-          <p>gyanusah@gmail.com</p>
-          <p>8360159981</p>
-          <p>123 Education ,nepal,siraha</p>
+        {/* Contact Info */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-3">
+            Contact Info
+          </h3>
+          <ul className="space-y-2 text-sm">
+            <li>
+              Email:{" "}
+              <a
+                href="mailto:gyanusah@gmail.com"
+                className="hover:text-blue-400"
+              >
+                gyanusah@gmail.com
+              </a>
+            </li>
+            <li>
+              Phone:{" "}
+              <a href="tel:8360159981" className="hover:text-blue-400">
+                8360159981
+              </a>
+            </li>
+            <li>Address: 123 Education, Siraha, Nepal</li>
+          </ul>
         </div>
       </div>
-      <hr className='w-full mb-1' />
-      <div className="w-full m-auto mb-5">
-        
-        <p className="text-center">© 2025 MyWebsite. All rights reserved. </p>
+
+      {/* Divider */}
+      <div className="border-t border-gray-700"></div>
+
+      {/* Bottom Section */}
+      <div className="text-center py-4 text-sm text-gray-400">
+        © 2025 EduPlatform. All rights reserved.
       </div>
-    </div>
+    </footer>
   );
 }

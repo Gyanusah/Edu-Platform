@@ -1,5 +1,5 @@
+import React from "react";
 import { Star, Users, Clock, Globe } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 const courses = [
   {
@@ -48,20 +48,26 @@ const courses = [
     price: "$399",
     mode: "Offline",
   },
+  
 ];
 
 export default function FeaturedCourses() {
-  
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 relative z-0">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900">Featured Courses</h2>
+          <h2
+            className="text-4xl font-bold bg-gradient-to-r from-blue-600
+           via-purple-400 to-green-500
+            bg-clip-text text-transparent"
+          >
+            Explore Our Courses
+          </h2>
           <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
-            Start your learning journey with our most popular and highly-rated
-            courses, designed by industry experts and loved by students
-            worldwide.
+            Choose from our comprehensive selection of courses designed to
+            advance your career and expand your skills in today's most in-demand
+            fields.
           </p>
         </div>
 
@@ -70,14 +76,14 @@ export default function FeaturedCourses() {
           {courses.map((course) => (
             <div
               key={course.id}
-              className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition"
+              className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 group"
             >
               {/* Image */}
-              <div className="relative">
+              <div className="relative overflow-hidden z-0">
                 <img
                   src={course.image}
                   alt={course.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover transform group-hover:-translate-y-2 transition-transform duration-500 ease-out"
                 />
                 {/* Category Tag */}
                 <span className="absolute top-2 left-2 bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1 rounded-full">
@@ -131,8 +137,7 @@ export default function FeaturedCourses() {
                 </div>
 
                 {/* Button */}
-                <button   className="mt-4 w-full bg-blue-600 text-white font-medium py-2 rounded-lg hover:bg-blue-700 transition">
-                 
+                <button className="mt-4 w-full bg-blue-600 text-white font-medium py-2 rounded-lg hover:bg-blue-700 transition">
                   View Course
                 </button>
               </div>

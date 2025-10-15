@@ -10,7 +10,7 @@ export default function Navbar() {
   const { openSignIn } = useClerk();
   const { user } = useUser();
   return (
-    <nav className="bg-white  fixed  w-full shadow-sm ">
+    <nav className="bg-white  fixed  w-full shadow-sm z-50 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
@@ -40,14 +40,18 @@ export default function Navbar() {
             </Link>
 
             <div>
-              <button
-                onClick={() => openSignIn()}
-                className="
+              {user ? (
+                <UserButton />
+              ) : (
+                <button
+                  onClick={() => openSignIn()}
+                  className="
               ml-4 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium hover:opacity-90 transition
               "
-              >
-                Create Account
-              </button>
+                >
+                  Create Account
+                </button>
+              )}
             </div>
           </div>
 

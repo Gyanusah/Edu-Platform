@@ -32,15 +32,15 @@ const contact = [
 
 
   return (
-    <section className=" bg-gray-300  min-h-screen sm:p-8 mx-auto py-12 lg:py-24  ">
+    <section className=" bg-gray-100  min-h-screen sm:p-8 mx-auto py-12 lg:py-24  ">
       <div
-        className="    flex justify-center  pt-30 w-full    sm:p-12
-         text-white text-center 
+        className="    flex justify-center  pt-10 w-full    sm:p-12
+         text-gray-400 text-center 
          "
       >
         <div className="text-center mb-5 sm:mb-5 max-w-3xl mx-auto grid ">
           <h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4
+            className="text-3xl sm:text-4xl lg:text-4xl font-extrabold mb-4
            bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600  
              drop-shadow-[0_0_10px_rgba(180,110,260,0.8)]
         "
@@ -49,7 +49,7 @@ const contact = [
           </h1>
 
           <p
-            className="text-base sm:text-lg text-white px-4
+            className="text-base sm:text-lg text-black px-4
           "
           >
             Have questions about our courses or need guidance on your learning
@@ -79,12 +79,13 @@ const contact = [
           </div>
         ))}
       </div>
-      <div>
-        <ContactForm />
-        <FrequentlyAksQuestion/>
+      <div className=" gap-0 lg:gap-0 mt-10">
+        <div className="   ">
+          <ContactForm /> <FrequentlyAksQuestion />
+        </div>
+        
       </div>
-
-      
     </section>
   );
 }
+
