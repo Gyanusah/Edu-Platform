@@ -62,6 +62,8 @@ export default function HeroSection() {
          hover:scale-[1.05] duration-300"
           src="https://img.freepik.com/premium-photo/design-fist-pump-night-with-game-developer-people-office-deadline-celebration-success-creative-motivation-support-with-man-woman-programmer-team-workplace-complete-task_590464-503689.jpg"
           alt="student photo"
+          decoding="async"
+          fetchpriority="high"
         />
       </div>
     </div>
