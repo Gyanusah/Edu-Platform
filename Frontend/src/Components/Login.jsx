@@ -4,7 +4,8 @@ import { useAuth } from "../context/AuthContext";
 
 export default function Login() {
   const navigate = useNavigate();
-  const { login } = useAuth(); // ✅ useAuth hook called
+  const { login } = useAuth();
+  const backendUrl = import.meta.env.VITE_BACKEND_URL; // ✅ useAuth hook called
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -24,7 +25,7 @@ export default function Login() {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/login", {
+      const response = await fetch(`${backendUrl}/api/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

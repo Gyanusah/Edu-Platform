@@ -14,6 +14,9 @@ export default function SignUp() {
     role: "student", // ✅ lowercase value (consistent)
   });
 
+
+   const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -29,7 +32,7 @@ export default function SignUp() {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/register", {
+      const response = await fetch(`${backendUrl}/api/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
