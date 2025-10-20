@@ -37,7 +37,7 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         // 4️⃣ Check if user already exists
         const existingUser = await User.findOne({ email });
         if (existingUser) {
-            return res.status(400).json({
+            return res.status(409).json({
                 success: false,
                 message: "User already exists",
             });
@@ -82,7 +82,7 @@ try {
     //to check  email
     const user=await User.findOne({email})
 if(!user){
-    return res.status(400).json({
+    return res.status(401).json({
         success:false,
         message:"incorrect email or password"
     })
@@ -91,7 +91,7 @@ if(!user){
 //check password
     const isPassword = await bcrypt.compare(password,user.password)
     if (!isPassword) {
-        return res.status(400).json({
+        return res.status(401).json({
             success: false,
             message: "incorrect email or password"
         })
