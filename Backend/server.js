@@ -28,6 +28,10 @@ connectDB();
 // Routes
 app.use("/api", router);
 
+app.use('/', (req, res)=>{
+res.send("hello world")
+})
+
 
 
 
