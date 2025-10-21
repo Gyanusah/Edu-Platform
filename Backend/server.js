@@ -15,11 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // ✅ Allow requests from your React frontend
 app.use(
-    cors({
-        origin: "http://localhost:5173", // frontend URL
-        methods: ["GET", "POST", "PUT", "DELETE"],
-        credentials: true, // optional: if you send cookies or tokens
-    })
+    cors()
 );
 
 // Connect to MongoDB
