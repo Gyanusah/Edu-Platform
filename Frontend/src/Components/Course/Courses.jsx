@@ -100,6 +100,9 @@ import CourseCard from "./CourseCard";
 ];
 
 export default function Courses() {
+
+
+  
   return (
     <section className="py-16 bg-gray-50 relative z-0">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -123,7 +126,9 @@ export default function Courses() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {CoursesData?.map((course) => {
             return <CourseCard key={course.id} course={course} />;
+
           })}
+
         </div>
       </div>
     </section>

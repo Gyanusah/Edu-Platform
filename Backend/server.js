@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import connectDB from './utils/db.js';
 import router from './Router/userRouter.js';
 import cookieParser from 'cookie-parser';
+import courseRoutes from "./Router/courseRoutes.js";
 import cors from "cors";
 
 dotenv.config();
@@ -23,6 +24,7 @@ connectDB();
 
 // Routes
 app.use("/api", router);
+app.use("/api/courses", courseRoutes);
 
 app.use('/', (req, res)=>{
 res.send("hello world")
