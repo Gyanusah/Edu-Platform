@@ -14,17 +14,21 @@ export default function Navbar() {
     logout();
     navigate("/login");
   };
+  
 
   return (
-    <nav className="bg-white fixed w-full shadow-sm z-50">
+    <nav className=" bg-white fixed w-full shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <div  className="flex items-center space-x-2">
             <span className="text-blue-500 text-2xl">🎓</span>
             <span className="text-xl font-bold">
               <span className="text-blue-600">Edu</span>
-              <span className="bg-gradient-to-r from-purple-500 to-green-400 text-transparent bg-clip-text">
+              <span
+                
+                className="bg-gradient-to-r from-purple-500 to-green-400 text-transparent bg-clip-text"
+              >
                 Platform
               </span>
             </span>
@@ -65,7 +69,9 @@ export default function Navbar() {
             ) : (
               <>
                 <Link
-                  className="ml-4 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium hover:opacity-90 transition"
+                  className="ml-4 px-4 py-2 rounded-xl bg-gradient-to-r
+                   from-blue-500 to-purple-500 text-white font-medium 
+                   hover:opacity-90 transition"
                   to="/login"
                 >
                   Login
