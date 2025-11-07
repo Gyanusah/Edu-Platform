@@ -24,7 +24,7 @@ connectDB();
 
 // Routes
 app.use("/api", router);
-app.use("/api/courses", courseRoutes);
+app.use("/api", courseRoutes);
 
 app.use('/', (req, res)=>{
 res.send("hello world")

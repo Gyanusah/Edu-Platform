@@ -1,12 +1,13 @@
 import React from "react";
 import { Star, Users, Clock, Globe } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-function CourseCard({ course }) {
 
-   const navigate = useNavigate();
-   const handleViewCourse = () => {
-     navigate(`/course/${course._id || course.id}`); // 👈 Go to course details
-   };
+function CourseCard({ course }) {
+  const navigate = useNavigate();
+
+  const handleViewCourse = () => {
+    navigate(`/course/${course._id}`);
+  };
 
   return (
     <div className="mt-5">
@@ -66,7 +67,7 @@ function CourseCard({ course }) {
 
           <button
             onClick={handleViewCourse}
-            className="mt-4 w-full bg-blue-600 text-white font-medium py-2 rounded-lg hover:bg-blue-700 transition"
+            className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
           >
             View Course
           </button>
